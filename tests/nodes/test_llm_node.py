@@ -1,6 +1,8 @@
+from unittest.mock import AsyncMock, MagicMock, patch
+
 import pytest
-from unittest.mock import patch, AsyncMock, MagicMock
 from langchain_core.messages import AIMessage
+
 from app.nodes_and_edges.nodes.llm_node import llm_node
 
 

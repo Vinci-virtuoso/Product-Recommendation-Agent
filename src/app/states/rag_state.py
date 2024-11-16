@@ -1,6 +1,7 @@
 from typing import TypedDict
-from langchain_core.messages import BaseMessage
+
 from langchain.schema import Document
+from langchain_core.messages import BaseMessage
 
 
 class AgentState(TypedDict):

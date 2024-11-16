@@ -1,5 +1,7 @@
+from unittest.mock import AsyncMock, patch
+
 import pytest
-from unittest.mock import patch, AsyncMock
+
 from app.nodes_and_edges.nodes.prompt_node import prompt_node
 
 

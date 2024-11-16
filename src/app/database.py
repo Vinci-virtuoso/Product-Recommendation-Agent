@@ -1,7 +1,7 @@
-from langchain.schema import Document
-from langchain_openai import OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma
 from dotenv import load_dotenv
+from langchain.schema import Document
+from langchain_community.vectorstores import Chroma
+from langchain_openai import OpenAIEmbeddings
 
 load_dotenv()
 

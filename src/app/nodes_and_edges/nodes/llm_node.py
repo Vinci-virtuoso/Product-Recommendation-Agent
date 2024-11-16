@@ -1,6 +1,7 @@
 from langchain_core.messages import AIMessage
-from app.states.rag_state import AgentState
+
 from app.logic.llm import create_llm
+from app.states.rag_state import AgentState
 
 
 async def llm_node(state: AgentState):

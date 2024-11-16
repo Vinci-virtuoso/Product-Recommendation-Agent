@@ -1,4 +1,5 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, Depends, HTTPException
+
 from app.models.chat_models import ChatRequest, ChatResponse
 from app.workflows.rag_workflow import create_rag_graph
 

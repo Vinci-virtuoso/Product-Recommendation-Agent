@@ -1,5 +1,6 @@
-from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool
+from langchain_openai import ChatOpenAI
+
 
 @tool
 def get_weather(location: str):
@@ -13,10 +14,10 @@ def get_weather(location: str):
 def create_llm(model_name: str = "gpt-4o-mini") -> ChatOpenAI:
     """
     Factory function to create and configure the LLM model with the provided tools.
-    
+
     Args:
         model_name (str): The name of the language model to use.
-    
+
     Returns:
         ChatOpenAI: The configured LLM instance.
     """

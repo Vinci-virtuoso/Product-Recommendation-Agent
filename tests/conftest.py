@@ -1,6 +1,7 @@
 import pytest
-from langchain_core.messages import HumanMessage
 from langchain_core.documents import Document
+from langchain_core.messages import HumanMessage
+
 from app.states.rag_state import AgentState
 
 

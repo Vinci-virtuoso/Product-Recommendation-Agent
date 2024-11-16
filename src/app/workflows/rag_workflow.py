@@ -1,4 +1,5 @@
-from langgraph.graph import StateGraph, END
+from langgraph.graph import END, StateGraph
+
 from app.nodes_and_edges.nodes.llm_node import llm_node
 from app.nodes_and_edges.nodes.prompt_node import prompt_node
 from app.nodes_and_edges.nodes.retrieval_node import retrieve_node

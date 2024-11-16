@@ -1,4 +1,5 @@
-from app.logic.retrieval import create_retriever, db
+from app.logic.retrieval import create_retriever
+from app.database import db
 
 
 def retrieve_node(state):

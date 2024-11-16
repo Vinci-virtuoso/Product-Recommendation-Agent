@@ -13,7 +13,7 @@ async def chat(request: ChatRequest, graph=Depends(create_rag_graph)):
             "question": request.question,
         }
 
-        result_state = graph.invoke(input=initial_state)
+        result_state = await graph.ainvoke(input=initial_state)
 
         answer = result_state.get("answer", "Sorry, I couldn't find an answer.")
         return ChatResponse(answer=answer)

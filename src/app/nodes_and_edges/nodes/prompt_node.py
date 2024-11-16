@@ -1,7 +1,7 @@
 from app.logic.prompt import create_chat_prompt_template
 
 
-def prompt_node(state):
+async def prompt_node(state):
     print("State in prompt:", state)
     question = state["question"]
     context = state["context"]
@@ -9,7 +9,7 @@ def prompt_node(state):
 
     prompt = create_chat_prompt_template(context, question)
 
-    state["prompt"] = prompt.invoke(
+    state["prompt"] = await prompt.ainvoke(
         {"question": question, "context": formatted_context}
     )
     return state

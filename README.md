@@ -8,7 +8,7 @@ This project implements a modular **state machine** using **LangGraph** and **Fa
 
 1. **Set OpenAI API Key**:
 
-   - Add your `OPENAI_API_KEY` to the `.env` file:
+   - Rename `env.example` to `.env` and add your `OPENAI_API_KEY` to the `.env` file:
      ```plaintext
      OPENAI_API_KEY=your_openai_api_key
      ```

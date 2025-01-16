@@ -77,7 +77,7 @@ def init_db():
     session.commit()
 
     # Read products from CSV file
-    products_df = pd.read_csv(r'C:\Users\ayo\Langgraph-toolkit\fashion.csv')
+    products_df = pd.read_csv(r'C:\Users\username\file-directory-for-products.csv')
     products = [
         Product(
             ProductId=row['ProductId'],

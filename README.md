@@ -23,21 +23,24 @@ git clone https://github.com/Vinci-virtuoso/Product-Recommendation-Agent.git
 ```bash
 poetry install
 ```
+3. Configure database
+```bash
+cd src/app
+python database.py
+```
+4. Move the .db file to root folder
 
-3. Install frontend dependencies
+5. Start the backend server
+```bash
+poetry run python main.py
+```
+6. Install frontend dependencies
 ```bash
 cd frontend
 npm install
 ```
-
-4. Start the backend server
+7. Start the frontend development server
 ```bash
-poetry run python main.py
-```
-
-5. Start the frontend development server
-```bash
-cd frontend
 npm run dev
 ```
 

@@ -1,37 +1,116 @@
 # Product Recommendation Agent
 
-This project implements a Python-based product recommendation and ordering agent for fashion items. 
+A full-stack application built with Langgraph toolkit that provides intelligent product recommendations. The project combines a robust backend powered by Langgraph with a modern Next.js frontend.
 
-**Functionality:** This agent allows users to interact with a fashion product database using natural language. It can understand questions about products, such as "show me all men's shoes," and process orders, like "order the Carlton London Women Stylish Black Flats." The agent converts these natural language queries into SQL commands, executes them against the database, and returns a human-readable response.
+## Project Structure
 
-## Structure
+```
+├── frontend/
+│   ├── app/
+│   │   ├── fonts/
+│   │   ├── components/
+│   │   │   ├── hooks/
+│   │   │   │   └── use-toast.ts
+│   │   │   └── ui/
+│   │   │       ├── button.tsx
+│   │   │       ├── form.tsx
+│   │   │       ├── input.tsx
+│   │   │       ├── label.tsx
+│   │   │       └── toast.tsx
+│   │   └── lib/
+│   │       └── utils.ts
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── src/
+│   └── app/
+│       ├── api/
+│       │   └── v1/
+│       │       ├── endpoints/
+│       ├── logic/
+│       │   ├── check_attempts_router.py
+│       │   ├── execute_sql_router.py
+│       │   ├── get_database_schema.py
+│       │   ├── relevance_router.py
+│       ├── models/
+│       │   ├── chat_models.py
+│       ├── nodes_and_edges/
+│       │   ├── nodes/
+│       │       ├── check_relevance.py
+│       │       ├── convert_nl_sql.py
+│       │       ├── end_max_iterations.py
+│       │       ├── execute_sql.py
+│       │       ├── get_current_user.py
+│       │       ├── human_readable_answer.py
+│       │       ├── irrelevant.py
+│       │       └── regenerate_query.py
+├── main.py
+└── pyproject.toml
 
-*   `ProductRecommendation_agent.ipynb`: Core notebook for data analysis and model building.
-*   `streamlit_app.py`: Streamlit app providing a user interface.
-*   `fashion.csv`: Dataset of fashion items.
-*   `.env`: Stores environment variables.
-*   `example.db`: SQLite database for data storage.
-*   `requirements.txt`: Lists project dependencies.
+```
+
+## Features
+
+- **Modern Frontend**: Built with Next.js featuring a responsive and user-friendly interface
+- **Robust Backend**: Powered by Langgraph toolkit for intelligent recommendation processing
+- **API Integration**: RESTful API endpoints for seamless communication between frontend and backend
+- **Component Library**: Custom UI components for consistent design
+- **State Management**: Efficient state handling for product recommendations
+- **Database Integration**: SQL database integration for product data management
+
+## Technology Stack
+
+### Frontend
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Custom UI Components
+
+### Backend
+- Python
+- Langgraph Toolkit
+- FastAPI
+- SQL Database
 
 ## Getting Started
 
-To run the project:
+1. Clone the repository
+```bash
+git clone https://github.com/Vinci-virtuoso/Product-Recommendation-Agent.git
+```
 
-1. Clone the repository.
-2. Navigate to the project directory: `cd Product-Recommendation-Agent`
-3. Create a virtual environment (optional): `python -m venv venv` and activate it.
-4. Install dependencies: `pip install -r requirements.txt`
-5. Run the ProductRecommendation_agent down to the fastapi cell: `ProductRecommendation_agent.ipynb`
-6. Run the Streamlit app: `streamlit run streamlit_app.py`
+2. Install backend dependencies
+```bash
+poetry install
+```
 
-## Usage
+3. Install frontend dependencies
+```bash
+cd frontend
+npm install
+```
 
-Access the Streamlit app in your browser (usually `http://localhost:8501`) to interact with the product recommendation system.
+4. Start the backend server
+```bash
+poetry run python main.py
+```
 
-## Future Enhancements
+5. Start the frontend development server
+```bash
+cd frontend
+npm run dev
+```
 
-*   Enhance recommendation algorithms.
-*   Expand the dataset.
-*   Deploy to the cloud.
-*   Implement user authentication.
-*   Incorporate user feedback.
+## Development
+
+- Backend runs on `http://localhost:8000`
+- Frontend runs on `http://localhost:3000`
+- API documentation available at `http://localhost:8000/docs`
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

@@ -1,11 +1,23 @@
 import uvicorn
+import logging
 from fastapi import FastAPI
 
-from app.api.v1.endpoints.chat import router as chat_router
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from app.api.v1.endpoints.chat_workflow import router as chat_router
+
+# Configure logging
+logging.basicConfig(
+    filename='app.log',  # Log file name
+    level=logging.INFO,  # Log level
+    format='%(asctime)s - %(levelname)s - %(message)s'  # Log format
+)
 
 app = FastAPI(
-    title="Chat API",
-    description="An API for chat-based question answering using RAG workflow",
+    title="text-2-SQL API",
+    description="An API for chat-based question answering using text-2-SQL workflow",
     version="1.0.0",
 )
 
